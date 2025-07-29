@@ -15,7 +15,7 @@ const View = ()=>{
   console.log(id);
 
   useEffect(()=>{
-    axios.get(`http://localhost:8000/detail?id=${id}`)
+    axios.get(`http://34.64.103.69:8000/detail?id=${id}`)
     .then( (res)=> {
       // 성공 핸들링
       console.log(res.data);
@@ -44,7 +44,7 @@ const View = ()=>{
       }
       {board.image_path && (
         <div className="attachment">
-          <img src={`http://localhost:8000/${board.image_path}`} alt=""/>
+          <img src={`http://34.64.103.69:8000/${board.image_path}`} alt=""/>
         </div>
         )
       }

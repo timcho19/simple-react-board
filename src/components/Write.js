@@ -52,7 +52,7 @@ const Write = ({isModifyMode, boardId, setReset})=>{
     if(inputs.image){
       formData.append('image',inputs.image);
     }
-    axios.post('http://localhost:8000/insert',formData,{
+    axios.post('http://34.64.103.69:8000/insert',formData,{
       header:{'Content-Type':'multipart/form-data'}
     })
     .then( (res)=> {
@@ -66,7 +66,7 @@ const Write = ({isModifyMode, boardId, setReset})=>{
     });
   };
   const modify = ()=>{
-    axios.post('http://localhost:8000/modify',{
+    axios.post('http://34.64.103.69:8000/modify',{
       id:boardId, 
       title:inputs.title,
       content:inputs.content
@@ -83,7 +83,7 @@ const Write = ({isModifyMode, boardId, setReset})=>{
     });
   };
   const details = ()=>{
-    axios.get(`http://localhost:8000/detail?id=${boardId}`)
+    axios.get(`http://34.64.103.69:8000/detail?id=${boardId}`)
     .then( (res)=> {
       // 성공 핸들링
       console.log(res.data);
